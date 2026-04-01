@@ -51,20 +51,27 @@ docker run -d -p 5000:5000 app
 The application was deployed on an AWS EC2 instance with the following steps:
 1. Created VPC and Public Subnet
 ![VPC](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/4.png)
+---
 2. Created Security Group (Ports 22, 80, 5000)
-3. ![Security](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/5.png)
-4. Launched EC2 Ubuntu Instance
+![Security](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/5.png)
+---
+3. Launched EC2 Ubuntu Instance
 ![EC2](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/6.png)
-5. Connected via SSH
+---
+4. Connected via SSH
 ![SSH](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/7.png)
-6. Installed Docker on EC2
+---
+5. Installed Docker on EC2
 ```bash
 sudo apt update
 sudo apt install docker.io -y
 ```
+---
 6. Pulled Docker image from Docker Hub
+---
 7. Run the container and mapped ports
 ![Pulled](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/8.png)
+---
 8. Exposed the application to the internet via Public IP
 ```bash
 http://51.20.192.103
