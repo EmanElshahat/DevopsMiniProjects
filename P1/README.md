@@ -31,31 +31,32 @@ The application was containerized using Docker with a **multi-stage** build to c
 ```bash
 docker build -t app .
 ```
-![Build](https://github.com/EmanElshahat/DevopsTasks/blob/08bc24ef5d8e47632a757f0db9756cb4b106c466/Jenkins/lab24/screenshots/Screenshot%202026-02-08%20021114.png)
+![Build](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/1.png)
 
 #### Tag Image for Docker Hub $ Push into Docker Hub
 ```bash
 docker tag app <emanabosamra>/flaskapp
 docker push <emanabosamra>/flaskapp
 ```
-![Tag](https://github.com/EmanElshahat/DevopsTasks/blob/08bc24ef5d8e47632a757f0db9756cb4b106c466/Jenkins/lab24/screenshots/Screenshot%202026-02-08%20021114.png)
+![Tag](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/2.png)
 
 #### Run Container Locally
 ```bash
 docker run -d -p 5000:5000 app
 ```
-![Run](https://github.com/EmanElshahat/DevopsTasks/blob/08bc24ef5d8e47632a757f0db9756cb4b106c466/Jenkins/lab24/screenshots/Screenshot%202026-02-08%20021114.png)
+![Run](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/3.png)
 
 ---
 ### ☁️ AWS Deployment 
 The application was deployed on an AWS EC2 instance with the following steps:
 1. Created VPC and Public Subnet
-![VPC](https://github.com/EmanElshahat/DevopsTasks/blob/08bc24ef5d8e47632a757f0db9756cb4b106c466/Jenkins/lab24/screenshots/Screenshot%202026-02-08%20021114.png)
+![VPC](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/4.png)
 2. Created Security Group (Ports 22, 80, 5000)
+![Security](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/5.png)
 3. Launched EC2 Ubuntu Instance
-![Security](https://github.com/EmanElshahat/DevopsTasks/blob/08bc24ef5d8e47632a757f0db9756cb4b106c466/Jenkins/lab24/screenshots/Screenshot%202026-02-08%20021114.png)
+![EC2](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/5.png)
 4. Connected via SSH
-![EC2](https://github.com/EmanElshahat/DevopsTasks/blob/08bc24ef5d8e47632a757f0db9756cb4b106c466/Jenkins/lab24/screenshots/Screenshot%202026-02-08%20021114.png)
+![SSH](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/7.png)
 5. Installed Docker on EC2
 ```bash
 sudo apt update
@@ -63,12 +64,12 @@ sudo apt install docker.io -y
 ```
 6. Pulled Docker image from Docker Hub
 7. Run the container and mapped ports
-![Pulled](https://github.com/EmanElshahat/DevopsTasks/blob/08bc24ef5d8e47632a757f0db9756cb4b106c466/Jenkins/lab24/screenshots/Screenshot%202026-02-08%20021114.png)
+![Pulled](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/8.png)
 8. Exposed the application to the internet via Public IP
 ```bash
 http://51.20.192.103
 ```
-![application](https://github.com/EmanElshahat/DevopsTasks/blob/08bc24ef5d8e47632a757f0db9756cb4b106c466/Jenkins/lab24/screenshots/Screenshot%202026-02-08%20021114.png)
+![application](https://github.com/EmanElshahat/DevopsMiniProjects/blob/57411e936e79441d40273ace425ec65d46025216/P1/screenshots/9.png)
 
 ---
 
