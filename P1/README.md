@@ -25,7 +25,7 @@ Port 5000
 ---
 ### 🐳 Docker Containerization
 The application was containerized using Docker with a **multi-stage** build to create a lightweight and production-ready image.
--  [Dockerfile](./App/Dockerfile)
+-  [Dockerfile](/App/Dockerfile)
 
 ### 🧭 Docker Commands Used
 #### Build Docker Image
