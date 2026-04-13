@@ -48,21 +48,24 @@ docker run -d -p 8080:8080 login-app
 ```
 
 ### ☁️ AWS Deployment
--🔹 Created VPC with Public & Private Subnets
--🔹 Created Internet Gateway & NAT Gateway
--🔹 Created Security Groups
--🔹 Launched EC2 Ubuntu Instance
--🔹 Installed Docker on EC2
--🔹 Pulled Docker Image from Docker Hub
--🔹 Run Container on EC2
+-  Created VPC with Public & Private Subnets
+-  Created Internet Gateway & NAT Gateway
+-  Created Security Groups
+-  Launched EC2 Ubuntu Instance
+-  Installed Docker on EC2
+-  Pulled Docker Image from Docker Hub
+-  Run Container on EC2
 
 ### 🗄️ RDS Configuration
--🔹 Created MySQL RDS instance in Private Subnet
--🔹 Disabled Public Access
--🔹 Configured DB Subnet Group
--🔹 Connected EC2 to RDS via Security Groups
+- Created MySQL RDS instance in Private Subnet
+- Disabled Public Access
+- Configured DB Subnet Group
+  ![create](https://github.com/EmanElshahat/DevopsMiniProjects/blob/bced8664f7543d44098cc3efae3b759ed5d612df/P2/screenshots/1.png)
 
--🔹 Created Database manually:
+- Connected EC2 to RDS via Security Groups
+![create](https://github.com/EmanElshahat/DevopsMiniProjects/blob/bced8664f7543d44098cc3efae3b759ed5d612df/P2/screenshots/2.png)
+
+- Created Database manually:
 ```bash
 CREATE DATABASE UserDB;
 ```
@@ -80,6 +83,8 @@ password VARCHAR(50)
 ```bash
 INSERT INTO users (username, password) VALUES ('eman', '1234');
 ```
+![create](https://github.com/EmanElshahat/DevopsMiniProjects/blob/bced8664f7543d44098cc3efae3b759ed5d612df/P2/screenshots/3.png)
+
 
 ### 🔗 Application Configuration
 Updated application.properties:
