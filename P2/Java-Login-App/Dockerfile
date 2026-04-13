@@ -1,9 +1,24 @@
-FROM tomcat:9.0-jdk11
+# -------- Stage 1: Build --------
+FROM maven:3.9.9-eclipse-temurin-11 AS builder
 
-# remove default apps
-RUN rm -rf /usr/local/tomcat/webapps/*
+WORKDIR /app
 
-# copy WAR
-COPY target/dptweb-1.0.war /usr/local/tomcat/webapps/ROOT.war
+COPY pom.xml .
+
+RUN mvn dependency:go-offline
+
+COPY src ./src
+
+RUN mvn clean package -DskipTests
+
+
+# -------- Stage 2: Runtime --------
+FROM eclipse-temurin:11-jre-jammy
+
+WORKDIR /app
+
+COPY --from=builder /app/target/dptweb-1.0.jar app.jar
 
 EXPOSE 8080
+
+ENTRYPOINT ["java","-jar","app.jar"]
