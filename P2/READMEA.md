@@ -103,9 +103,9 @@ The application is accessible via:
  ## 🚀 Conclusion
  By completing this project:
 
-✔ The Java application was containerized using Docker
-✔ The Docker image was pushed to Docker Hub
-✔ The application was deployed on AWS EC2
-✔ A secure RDS database was created in a private subnet
-✔ EC2 was successfully connected to RDS
-✔ The application was exposed to the internet
+- ✔ The Java application was containerized using Docker
+- ✔ The Docker image was pushed to Docker Hub
+- ✔ The application was deployed on AWS EC2
+- ✔ A secure RDS database was created in a private subnet
+- ✔ EC2 was successfully connected to RDS
+- ✔ The application was exposed to the internet
