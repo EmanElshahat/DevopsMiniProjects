@@ -35,7 +35,10 @@ public class HomeController {
 		return mv;
 	}
 
-
+    @RequestMapping("/register")
+    public String registerPage() {
+    return "register";
+}
 
 
 }
