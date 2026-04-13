@@ -70,7 +70,7 @@ docker run -d -p 8080:8080 login-app
 CREATE DATABASE UserDB;
 ```
 
--🔹 Created Table:
+- Created Table:
 ```bash
 CREATE TABLE users (
 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -78,7 +78,7 @@ username VARCHAR(50),
 password VARCHAR(50)
 );
 ```
--🔹 Inserted Test User:
+- Inserted Test User:
 
 ```bash
 INSERT INTO users (username, password) VALUES ('eman', '1234');
