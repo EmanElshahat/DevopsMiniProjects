@@ -11,7 +11,7 @@
 	<groupId>com.devopsrealtime</groupId>
 	<artifactId>dptweb</artifactId>
 	<version>1.0</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>dptweb</name>
 	<description>DPT DevOps project for Spring Boot</description>
 
@@ -40,13 +40,20 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		
 		
 		
 		
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
