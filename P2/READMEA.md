@@ -48,26 +48,26 @@ docker run -d -p 8080:8080 login-app
 ```
 
 ### ☁️ AWS Deployment
-🔹 Created VPC with Public & Private Subnets
-🔹 Created Internet Gateway & NAT Gateway
-🔹 Created Security Groups
-🔹 Launched EC2 Ubuntu Instance
-🔹 Installed Docker on EC2
-🔹 Pulled Docker Image from Docker Hub
-🔹 Run Container on EC2
+-🔹 Created VPC with Public & Private Subnets
+-🔹 Created Internet Gateway & NAT Gateway
+-🔹 Created Security Groups
+-🔹 Launched EC2 Ubuntu Instance
+-🔹 Installed Docker on EC2
+-🔹 Pulled Docker Image from Docker Hub
+-🔹 Run Container on EC2
 
 ### 🗄️ RDS Configuration
-🔹 Created MySQL RDS instance in Private Subnet
-🔹 Disabled Public Access
-🔹 Configured DB Subnet Group
-🔹 Connected EC2 to RDS via Security Groups
+-🔹 Created MySQL RDS instance in Private Subnet
+-🔹 Disabled Public Access
+-🔹 Configured DB Subnet Group
+-🔹 Connected EC2 to RDS via Security Groups
 
-🔹 Created Database manually:
+-🔹 Created Database manually:
 ```bash
 CREATE DATABASE UserDB;
 ```
 
-🔹 Created Table:
+-🔹 Created Table:
 ```bash
 CREATE TABLE users (
 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -75,7 +75,7 @@ username VARCHAR(50),
 password VARCHAR(50)
 );
 ```
-🔹 Inserted Test User:
+-🔹 Inserted Test User:
 
 ```bash
 INSERT INTO users (username, password) VALUES ('eman', '1234');
