@@ -48,8 +48,8 @@ jobs:
         envs: IMAGE_NAME  
         script: |
           docker pull $IMAGE_NAME
-          docker stop login-app || true
-          docker rm login-app || true
+           docker ps -q --filter "publish=8081" | xargs -r docker stop
+          docker ps -q --filter "publish=8081" | xargs -r docker rm
           docker run -d -p 8081:8080 --name login-app $IMAGE_NAME     
 
 
