@@ -46,11 +46,10 @@ jobs:
         host: ${{ secrets.EC2_HOST }}
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.EC2_KEY }}
-        envs: IMAGE_NAME  
         envs: IMAGE_NAME,IMAGE_TAG
         script: |
           docker pull $IMAGE_NAME:$IMAGE_TAG
-          docker ps -q | xargs -r docker stop
-          docker ps -aq | xargs -r docker rm
+          docker stop -f login-app || true
+          docker rm -f login-app || true
           docker run -d -p 8081:8080 --name login-app $IMAGE_NAME:$IMAGE_TAG
 
