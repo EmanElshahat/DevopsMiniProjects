@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: "Enter image tag to rollback"
+        required: true
 env:
   IMAGE_NAME: emanabosamra/login-app
   IMAGE_TAG: ${{ github.sha }}
@@ -48,8 +53,8 @@ jobs:
         key: ${{ secrets.EC2_KEY }}
         envs: IMAGE_NAME,IMAGE_TAG
         script: |
-          docker pull $IMAGE_NAME:$IMAGE_TAG
+          docker pull $IMAGE_NAME:${{ github.event.inputs.image_tag || env.IMAGE_TAG }}
           docker stop -f login-app || true
           docker rm -f login-app || true
-          docker run -d -p 8081:8080 --name login-app $IMAGE_NAME:$IMAGE_TAG
+          docker run -d -p 8081:8080 --name login-app $IMAGE_NAME:${{ github.event.inputs.image_tag || env.IMAGE_TAG }}
 
