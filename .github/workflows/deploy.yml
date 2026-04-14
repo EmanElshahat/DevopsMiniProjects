@@ -54,7 +54,7 @@ jobs:
         envs: IMAGE_NAME,IMAGE_TAG
         script: |
           docker pull $IMAGE_NAME:${{ github.event.inputs.image_tag || env.IMAGE_TAG }}
-          docker stop -f login-app || true
-          docker rm -f login-app || true
+          docker stop login-app || true
+          docker rm login-app || true
           docker run -d -p 8081:8080 --name login-app $IMAGE_NAME:${{ github.event.inputs.image_tag || env.IMAGE_TAG }}
 
