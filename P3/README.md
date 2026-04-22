@@ -18,13 +18,13 @@ It also includes versioning and rollback capabilities for better release managem
 
 ---
 ## ⚙️ CI/CD Pipeline Workflow
-The pipeline is triggered on:
-
+ The pipeline is triggered on:
 - Push to `main` branch (automatic deployment)
 - Manual trigger using workflow_dispatch (rollback)
 
 ---
 ## 🧭 Pipeline Stages
+ [deploy.yml](../.github/workflows/deploy.yml)
 ### 1. Build Application (CI)
 - The application is built using Maven:
 `mvn clean package`
@@ -71,6 +71,8 @@ latest or 041afd71671adabca
 -- Pull selected version
 -- Redeploy application
 -- Replace current running version
+
+![Rollback](https://github.com/EmanElshahat/DevopsMiniProjects/blob/754a5263ced05a32eaf0221dc32c04c16c061459/P3/screenshots/Screenshot%202026-04-22%20154554.png)
 
 ---
 
